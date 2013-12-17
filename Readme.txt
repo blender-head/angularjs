@@ -1,1 +1,1 @@
-An AngukarJS tutorial from Lynda.com
+An AngularJS tutorial from Lynda.com
