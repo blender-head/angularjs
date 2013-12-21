@@ -1,0 +1,54 @@
+1. Files needed :
+
+	- angular.js
+	- angular-resource.min.js (handle server side data)
+	
+2. Enabling AngularJS :
+
+	- add "ng-app" attribute to element you wish AngularJS to be enabled
+	  e.g: <html ng-app>
+
+3. Adding controller :
+
+	- add a "controller" folder to "js" folder
+	- controller name: AppCtrl
+	- controller filename: app.js
+	- include the "app.js" to html file
+	- add 'ng-controller="AppCtrl"' to html element: <div class="container" ng-controller="AppCtrl">
+	
+4. Loop control:
+
+	- ng-repeat :
+	
+		<ul ng-repeat="airport in airports">
+			<li>{{airport.code}}</li>
+			<li>{{airport.city}}</li>
+			<li>{{airport.name}}</li>
+		</ul>
+		
+5. Filter:
+
+	- {{airport.code}} - {{airport.city | uppercase}}
+	- {{'128' | currency}}
+	- {{airports | json}}
+	
+6. Click event:
+
+	- ng-click :
+		
+		ng-click="function_name()"
+		<a href="" ng-click="setAirport(airport.code)">{{airport.code}} - {{airport.city}}</a>
+	
+7. Show event:
+
+	- ng-show :
+		
+		ng-show="variable_name"
+		<p ng-show="currentAirport">Current airport: {{currentAirport.name}}</p>
+	
+8. Include partial directive:
+
+	- ng-include :
+	
+		<div class="span5" ng-include src="sidebarURL"></div>
+		<ng-include class="span5" src="sidebarURL"></ng-include>
